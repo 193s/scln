@@ -1,4 +1,5 @@
 #!/bin/sh
 
 code="println($*)"
-scala -e "$code"
+
+scala -e "$code" 2>&1 1>&2 | sed -e 's/.*error:/error:/g' 2>&1 1>&2
