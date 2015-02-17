@@ -1,0 +1,4 @@
+#!/bin/sh
+
+code="println($*)"
+scala -e "$code"
